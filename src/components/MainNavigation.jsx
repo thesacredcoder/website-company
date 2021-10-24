@@ -18,6 +18,17 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     width: theme.spacing(48),
   },
+  link: {
+    "&:hover": {
+      backgroundColor: theme.palette.secondary.main,
+      color: "white",
+      cursor: "pointer",
+      padding: theme.spacing(1),
+      paddingLeft: 15,
+      paddingRight: 15,
+      borderRadius: 20,
+    },
+  },
 }));
 
 const MainNavigation = () => {
@@ -29,9 +40,9 @@ const MainNavigation = () => {
           <Typography>Website Company</Typography>
         </div>
         <div className={classes.links}>
-          <Typography>Home</Typography>
-          <Typography>Courses</Typography>
-          <Typography>Connect</Typography>
+          <Typography className={classes.link}>Home</Typography>
+          <Typography className={classes.link}>Courses</Typography>
+          <Typography className={classes.link}>Connect</Typography>
         </div>
       </Toolbar>
     </AppBar>
