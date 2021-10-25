@@ -2,6 +2,7 @@ import React from "react";
 import { createTheme, CssBaseline, ThemeProvider } from "@material-ui/core";
 
 import { Home, MainNavigation } from "./components";
+import Testimonials from "./components/Testimonials";
 
 const theme = createTheme({
   palette: {
@@ -37,6 +38,7 @@ function App() {
       <CssBaseline />
       <MainNavigation />
       <Home />
+      <Testimonials />
     </ThemeProvider>
   );
 }

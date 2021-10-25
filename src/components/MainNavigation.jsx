@@ -16,9 +16,20 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
-    width: theme.spacing(48),
+    width: theme.spacing(54),
+    height: theme.spacing(4),
   },
   link: {
+    cursor: "pointer",
+    "&:active": {
+      backgroundColor: theme.palette.secondary.main,
+      color: "white",
+      cursor: "pointer",
+      padding: theme.spacing(1),
+      paddingLeft: 15,
+      paddingRight: 15,
+      borderRadius: 20,
+    },
     "&:hover": {
       backgroundColor: theme.palette.secondary.main,
       color: "white",
