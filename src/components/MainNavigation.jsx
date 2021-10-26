@@ -1,4 +1,3 @@
-// npm install @material-ui/core
 import React from "react";
 import { AppBar, Toolbar, Typography, makeStyles } from "@material-ui/core";
 
@@ -21,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const MainNavigation = () => {
-  const classes = useStyles();
+  const classes = useStyles(); //initialising the styles
   return (
     <AppBar position="static">
       <Toolbar className={classes.root}>
