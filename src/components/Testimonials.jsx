@@ -1,7 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import { Button, Grid, Typography } from "@material-ui/core";
+import { ArrowForwardRounded } from "@material-ui/icons";
 import Marquee from "react-fast-marquee";
+import { HiArrowCircleRight } from "react-icons/hi";
+import AppButton from "../utils/AppButton";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,6 +37,13 @@ const useStyles = makeStyles((theme) => ({
   salesText: {
     fontWeight: "400",
   },
+  button: {
+    marginTop: theme.spacing(20),
+    borderRadius: 0,
+    width: 250,
+    fontSize: 24,
+    fontWeight: "400",
+  },
 }));
 
 function Testimonials(props) {
@@ -47,6 +57,9 @@ function Testimonials(props) {
           </Typography>
         </Grid>
         <Grid sm={12}>
+          <Marquee direction="right" speed={120} gradient={false}>
+            <Typography>heyss</Typography>
+          </Marquee>
           <Marquee
             speed={120}
             gradient={false}
@@ -81,9 +94,12 @@ function Testimonials(props) {
             We beg to <span className={classes.accent}>differ</span>. We can{" "}
             <span className={classes.accent}>prove</span> too!
           </Typography>
-          <Button variant="contained" color="secondary">
+          <AppButton
+            className={classes.button}
+            endIcon={<HiArrowCircleRight size={35} />}
+          >
             Explore Now
-          </Button>
+          </AppButton>
         </Grid>
       </Grid>
     </>

@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Grid, makeStyles, Typography } from "@material-ui/core";
 
 import llama from "../assets/llama-removebg.png";
+import AppButton from "../utils/AppButton";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,6 +26,14 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     // justifyContent: "space-evenly",
     alignItems: "center",
+  },
+  button: {
+    marginLeft: 12,
+    // marginTop: theme.spacing(20),
+    borderRadius: 0,
+    // width: 250,
+    // fontSize: 24,
+    fontWeight: "400",
   },
 }));
 
@@ -57,13 +66,14 @@ const Home = () => {
             <span className={classes.accent}>Wonder</span> how{" "}
             <span className={classes.accent}>you can be</span> better?
           </Typography>
-          <Button
+          {/* <Button
             variant="contained"
             color="secondary"
             style={{ marginLeft: 12 }}
           >
             Contact Us
-          </Button>
+          </Button> */}
+          <AppButton className={classes.button}>Contact Us</AppButton>
         </div>
       </Grid>
       {/* <Grid item sm={5} justifyContent="center" alignItems="center">
